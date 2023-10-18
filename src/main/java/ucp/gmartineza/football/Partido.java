@@ -9,6 +9,15 @@ public class Partido {
     Equipo equipoVisitante;
     List<Tarjeta> tarjetas = new ArrayList<>();
     String nombre;
+    Estadio estadio;
+
+    public Estadio getEstadio() {
+        return estadio;
+    }
+
+    public void setEstadio(Estadio estadio) {
+        this.estadio = estadio;
+    }
 
     public String getFecha() {
         return fecha;
@@ -50,7 +59,15 @@ public class Partido {
         this.nombre = nombre;
     }
 
-    public Partido(Equipo pEquipoLocal,Equipo pEquipoVisitante, String pNombre){
+    // Constructor
+    public Partido(Equipo pEquipoLocal, Equipo pEquipoVisitante, String pNombre){
+        setEquipoLocal(pEquipoLocal);
+        setEquipoVisitante(pEquipoVisitante);
+        setNombre(pNombre + " " + pEquipoLocal.getAbreviatura()+"x"+pEquipoVisitante.getAbreviatura());
+    }
+
+    public Partido(Estadio pEstadio, Equipo pEquipoLocal, Equipo pEquipoVisitante, String pNombre){
+        setEstadio(pEstadio);
         setEquipoLocal(pEquipoLocal);
         setEquipoVisitante(pEquipoVisitante);
         setNombre(pNombre + " " + pEquipoLocal.getAbreviatura()+"x"+pEquipoVisitante.getAbreviatura());
