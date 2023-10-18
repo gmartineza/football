@@ -1,5 +1,7 @@
 package ucp.gmartineza.football;
 
+import ucp.gmartineza.football.Interfaces.IPlayer;
+
 public class Jugador implements IPlayer{
     String nombre;
     int numeroJugador;
