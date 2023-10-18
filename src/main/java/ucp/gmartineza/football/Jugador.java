@@ -4,14 +4,14 @@ import ucp.gmartineza.football.Interfaces.IPlayer;
 
 public class Jugador implements IPlayer{
     String nombre;
-    int numeroJugador;
+    int numero;
 
-    public int getNumeroJugador() {
-        return numeroJugador;
+    public int getNumero() {
+        return numero;
     }
 
-    public void setNumeroJugador(int numeroJugador) {
-        this.numeroJugador = numeroJugador;
+    public void setNumero(int pNumero) {
+        this.numero = pNumero;
     }
 
     public String getName() {
@@ -22,8 +22,8 @@ public class Jugador implements IPlayer{
         this.nombre = pNombre;
     }
 
-    public Jugador(String pNombre, int pNumeroJugador){
+    public Jugador(String pNombre, int pNumero){
         setNombre(pNombre);
-        setNumeroJugador(pNumeroJugador);
+        setNumero(pNumero);
     }
 }

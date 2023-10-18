@@ -7,7 +7,7 @@ public class Partido {
     String fecha;
     Equipo equipoLocal;
     Equipo equipoVisitante;
-    List<Tarjeta> tarjetas = new ArrayList<>();
+    List<TarjetaBase> tarjetas = new ArrayList<>();
     String nombre;
     Estadio estadio;
 
@@ -43,11 +43,11 @@ public class Partido {
         this.equipoVisitante = equipoVisitante;
     }
 
-    public List<Tarjeta> getTarjetas() {
+    public List<TarjetaBase> getTarjetas() {
         return tarjetas;
     }
 
-    public void setTarjetas(List<Tarjeta> tarjetas) {
+    public void setTarjetas(List<TarjetaBase> tarjetas) {
         this.tarjetas = tarjetas;
     }
 
@@ -73,7 +73,7 @@ public class Partido {
         setNombre(pNombre);
     }
 
-    public void agregar(Tarjeta pTarjeta){
+    public void agregar(TarjetaBase pTarjeta){
         this.tarjetas.add(pTarjeta);
     }
 

@@ -49,7 +49,7 @@ public class Equipo {
 
     public Jugador obtenerJugador(int pNumeroJugador) {
         Optional<Jugador> jugadorEncontrado = jugadores.stream()
-                .filter(jugador -> jugador.getNumeroJugador() == pNumeroJugador)
+                .filter(jugador -> jugador.getNumero() == pNumeroJugador)
                 .findFirst();
 
         return jugadorEncontrado.orElse(null);
