@@ -52,7 +52,7 @@ public class Partido {
     }
 
     public String getName() {
-        return (this.nombre + " " + this.equipoLocal.getAbreviatura() +"x"+ this.equipoVisitante.getAbreviatura());
+        return (this.nombre + " " + this.equipoLocal.getAbreviatura() + "x" + this.equipoVisitante.getAbreviatura());
     }
 
     public void setNombre(String nombre) {
