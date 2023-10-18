@@ -36,6 +36,7 @@ public class Estadio {
         setPais(pPais);
     }
 
+    @Override
     public String toString(){
         return (getName() + ", " + getCiudad() + " (" + getPais() + ")");
     }
