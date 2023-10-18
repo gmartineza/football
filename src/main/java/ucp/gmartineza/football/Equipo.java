@@ -9,7 +9,7 @@ public class Equipo {
     List<Jugador> jugadores = new ArrayList<>();
     String abreviatura;
 
-    public String getNombre() {
+    public String getName() {
         return nombre;
     }
 

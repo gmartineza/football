@@ -12,7 +12,7 @@ public class Jugador implements IPlayer{
         this.numeroJugador = numeroJugador;
     }
 
-    public String getNombre() {
+    public String getName() {
         return this.nombre;
     }
 

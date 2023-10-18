@@ -21,7 +21,7 @@ public class Estadio {
         this.ciudad = ciudad;
     }
 
-    public String getNombre() {
+    public String getName() {
         return nombre;
     }
 
@@ -37,6 +37,6 @@ public class Estadio {
     }
 
     public String toString(){
-        return (getNombre() + ", " + getCiudad() + " (" + getPais() + ")");
+        return (getName() + ", " + getCiudad() + " (" + getPais() + ")");
     }
 }

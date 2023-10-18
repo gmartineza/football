@@ -17,10 +17,10 @@ public class Parcial1Tests {
         torneo.agregar(palmeiras);
 
 
-        assertEquals("Boca Juniors", boca.getNombre());            
+        assertEquals("Boca Juniors", boca.getName());            
         assertEquals("BOC", boca.getAbreviatura());        
     
-        assertEquals("Palmeiras", palmeiras.getNombre());  
+        assertEquals("Palmeiras", palmeiras.getName());  
         assertEquals("PAL", palmeiras.getAbreviatura());        
         
         assertEquals(2, torneo.equiposCantidad());
@@ -57,10 +57,10 @@ public class Parcial1Tests {
         torneo.agregar(partido2Vuelta);
 
         assertEquals(4, torneo.partidosCantidad());  
-        assertEquals("Semifinal Partido Ida INTxFLU", partido1Ida.getNombre());        
-        assertEquals("Semifinal Partido Vuelta FLUxINT", partido1Vuelta.getNombre());      
-        assertEquals("Semifinal Partido Ida PALxBOC", partido2Ida.getNombre());        
-        assertEquals("Semifinal Partido Vuelta BOCxPAL", partido2Vuelta.getNombre());
+        assertEquals("Semifinal Partido Ida INTxFLU", partido1Ida.getName());        
+        assertEquals("Semifinal Partido Vuelta FLUxINT", partido1Vuelta.getName());      
+        assertEquals("Semifinal Partido Ida PALxBOC", partido2Ida.getName());        
+        assertEquals("Semifinal Partido Vuelta BOCxPAL", partido2Vuelta.getName());
 
     }
 
@@ -78,8 +78,8 @@ public class Parcial1Tests {
 
         assertEquals(2, boca.jugadoresCantidad());          
         
-        assertEquals("Edinson Cavani", boca.obtenerJugador(10).getNombre());          
-        assertEquals("Valentin Barco", boca.obtenerJugador(19).getNombre());  
+        assertEquals("Edinson Cavani", boca.obtenerJugador(10).getName());          
+        assertEquals("Valentin Barco", boca.obtenerJugador(19).getName());  
 
     }
 
@@ -106,7 +106,7 @@ public class Parcial1Tests {
         assertEquals(1, partidoIda.tarjetasCantidad());          
         
         assertEquals("ROJA", partidoIda.getTarjetas().get(0).getColor());           
-        assertEquals("Edinson Cavani", partidoIda.getTarjetas().get(0).getJugador().getNombre());   
+        assertEquals("Edinson Cavani", partidoIda.getTarjetas().get(0).getJugador().getName());   
 
 
     }

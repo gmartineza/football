@@ -51,8 +51,8 @@ public class Partido {
         this.tarjetas = tarjetas;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getName() {
+        return (this.nombre + " " + this.equipoLocal.getAbreviatura() +"x"+ this.equipoVisitante.getAbreviatura());
     }
 
     public void setNombre(String nombre) {
@@ -63,14 +63,14 @@ public class Partido {
     public Partido(Equipo pEquipoLocal, Equipo pEquipoVisitante, String pNombre){
         setEquipoLocal(pEquipoLocal);
         setEquipoVisitante(pEquipoVisitante);
-        setNombre(pNombre + " " + pEquipoLocal.getAbreviatura()+"x"+pEquipoVisitante.getAbreviatura());
+        setNombre(pNombre);
     }
 
     public Partido(Estadio pEstadio, Equipo pEquipoLocal, Equipo pEquipoVisitante, String pNombre){
         setEstadio(pEstadio);
         setEquipoLocal(pEquipoLocal);
         setEquipoVisitante(pEquipoVisitante);
-        setNombre(pNombre + " " + pEquipoLocal.getAbreviatura()+"x"+pEquipoVisitante.getAbreviatura());
+        setNombre(pNombre);
     }
 
     public void agregar(Tarjeta pTarjeta){
