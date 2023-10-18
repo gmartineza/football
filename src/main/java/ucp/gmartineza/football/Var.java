@@ -1,7 +1,5 @@
+package ucp.gmartineza.football;
 import java.util.List;
-
-import ucp.gmartineza.football.Partido;
-import ucp.gmartineza.football.TarjetaBase;
 
 public class Var {
     Partido partido;

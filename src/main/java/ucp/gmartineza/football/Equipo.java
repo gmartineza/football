@@ -4,9 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import ucp.gmartineza.football.Interfaces.IJugador;
+
 public class Equipo {
     String nombre;
-    List<Jugador> jugadores = new ArrayList<>();
+    List<IJugador> jugadores = new ArrayList<>();
     String abreviatura;
 
     public String getName() {
@@ -17,11 +19,11 @@ public class Equipo {
         this.nombre = nombre;
     }
 
-    public List<Jugador> getJugadores() {
+    public List<IJugador> getJugadores() {
         return jugadores;
     }
 
-    public void setJugadores(List<Jugador> jugadores) {
+    public void setJugadores(List<IJugador> jugadores) {
         this.jugadores = jugadores;
     }
 
@@ -39,7 +41,7 @@ public class Equipo {
         this.abreviatura = pAbreviatura;
     }
 
-    public void agregar(Jugador pJugador){
+    public void agregar(IJugador pJugador){
         this.jugadores.add(pJugador);
     }
 
@@ -47,12 +49,16 @@ public class Equipo {
         return this.jugadores.size();
     }
 
-    public Jugador obtenerJugador(int pNumeroJugador) {
-        Optional<Jugador> jugadorEncontrado = jugadores.stream()
+    public IJugador obtenerJugador(int pNumeroJugador) {
+        Optional<IJugador> jugadorEncontrado = jugadores.stream()
                 .filter(jugador -> jugador.getNumero() == pNumeroJugador)
                 .findFirst();
 
         return jugadorEncontrado.orElse(null);
+    }
+
+    public String imprimirPlantel(){
+        return ;
     }
 
 }
