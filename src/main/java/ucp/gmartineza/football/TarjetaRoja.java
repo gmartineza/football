@@ -1,6 +1,4 @@
-import ucp.gmartineza.football.Jugador;
-import ucp.gmartineza.football.TarjetaBase;
-
+package ucp.gmartineza.football;
 public class TarjetaRoja extends TarjetaBase{
 
     public TarjetaRoja(Jugador jugador) {
