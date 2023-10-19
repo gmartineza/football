@@ -9,9 +9,9 @@ import java.util.Optional;
 import ucp.gmartineza.football.Interfaces.IJugador;
 
 public class Equipo {
-    String nombre;
-    List<IJugador> jugadores = new ArrayList<>();
-    String abreviatura;
+    private String nombre;
+    private List<IJugador> jugadores = new ArrayList<>();
+    private String abreviatura;
 
     public String getName() {
         return nombre;
@@ -62,6 +62,7 @@ public class Equipo {
     public String imprimirPlantel(){
         // sort jugadores by numero
         // [%s] %s (%s),... .format(numero, nombre, posicion)
+        List<IJugador> jugadores = this.jugadores;
         Comparator<IJugador> byNumero = Comparator.comparing(IJugador::getNumero);
         Collections.sort(jugadores, byNumero);
         String plantel = "";

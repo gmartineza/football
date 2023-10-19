@@ -1,8 +1,11 @@
 package ucp.gmartineza.football;
+
+import ucp.gmartineza.football.Interfaces.IJugador;
+
 public class TarjetaRoja extends TarjetaBase{
 
-    public TarjetaRoja(Jugador jugador) {
-        super("ROJA", jugador);
+    public TarjetaRoja(IJugador pJugador) {
+        super("ROJA", pJugador);
     }
 
 }
