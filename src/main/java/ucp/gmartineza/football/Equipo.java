@@ -1,6 +1,8 @@
 package ucp.gmartineza.football;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 
@@ -58,7 +60,20 @@ public class Equipo {
     }
 
     public String imprimirPlantel(){
-        return ;
-    }
+        // sort jugadores by numero
+        // [%s] %s (%s),... .format(numero, nombre, posicion)
+        Comparator<IJugador> byNumero = Comparator.comparing(IJugador::getNumero);
+        Collections.sort(jugadores, byNumero);
+        String plantel = "";
+        for (IJugador jugador : jugadores) {
+            if (!plantel.isEmpty()){
+                plantel = plantel.concat(", ");
+            }
+            plantel = plantel.concat("[" + jugador.getNumero() + "] " +
+                    jugador.getName() + " (" + jugador.getPosicion() +")"
+                    );
+        }
 
+        return plantel;
+    }
 }
