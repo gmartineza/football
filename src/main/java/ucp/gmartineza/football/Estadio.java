@@ -2,7 +2,8 @@ package ucp.gmartineza.football;
 
 import ucp.gmartineza.football.Interfaces.IImprimible;
 
-public class Estadio implements IImprimible{
+public class Estadio
+        implements IImprimible {
     String nombre;
     String ciudad;
     String pais;
@@ -32,14 +33,14 @@ public class Estadio implements IImprimible{
     }
 
     // Constructor
-    public Estadio(String pNombre, String pCiudad, String pPais){
+    public Estadio(String pNombre, String pCiudad, String pPais) {
         setNombre(pNombre);
         setCiudad(pCiudad);
         setPais(pPais);
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return (getName() + ", " + getCiudad() + " (" + getPais() + ")");
     }
 

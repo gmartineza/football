@@ -9,7 +9,8 @@ import java.util.Optional;
 import ucp.gmartineza.football.Interfaces.IImprimible;
 import ucp.gmartineza.football.Interfaces.IJugador;
 
-public class Equipo implements IImprimible{
+public class Equipo
+        implements IImprimible {
     private String nombre;
     private List<IJugador> jugadores = new ArrayList<>();
     private String abreviatura;

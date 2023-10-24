@@ -3,7 +3,8 @@ package ucp.gmartineza.football;
 import ucp.gmartineza.football.Interfaces.IImprimible;
 import ucp.gmartineza.football.Interfaces.IJugador;
 
-public class Jugador implements IJugador, IImprimible{
+public class Jugador
+        implements IJugador, IImprimible {
     String nombre;
     int numero;
     String posicion;
@@ -24,7 +25,7 @@ public class Jugador implements IJugador, IImprimible{
         this.nombre = pNombre;
     }
 
-    public Jugador(String pNombre, int pNumero){
+    public Jugador(String pNombre, int pNumero) {
         setNombre(pNombre);
         setNumero(pNumero);
     }
