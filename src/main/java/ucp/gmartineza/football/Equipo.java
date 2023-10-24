@@ -6,9 +6,10 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 
+import ucp.gmartineza.football.Interfaces.IImprimible;
 import ucp.gmartineza.football.Interfaces.IJugador;
 
-public class Equipo {
+public class Equipo implements IImprimible{
     private String nombre;
     private List<IJugador> jugadores = new ArrayList<>();
     private String abreviatura;
@@ -76,5 +77,12 @@ public class Equipo {
         }
 
         return plantel;
+    }
+
+    public String impresion() {
+        // "[Equipo] Boca Juniors > BOC"
+        return String.format("[Equipo] %s > %s",
+                getName(),
+                getAbreviatura());
     }
 }

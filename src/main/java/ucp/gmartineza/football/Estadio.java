@@ -1,6 +1,8 @@
 package ucp.gmartineza.football;
 
-public class Estadio {
+import ucp.gmartineza.football.Interfaces.IImprimible;
+
+public class Estadio implements IImprimible{
     String nombre;
     String ciudad;
     String pais;
@@ -39,5 +41,13 @@ public class Estadio {
     @Override
     public String toString(){
         return (getName() + ", " + getCiudad() + " (" + getPais() + ")");
+    }
+
+    public String impresion() {
+        // "[Estadio] La Bombonera (Buenos Aires - Argentina)"
+        return String.format("[Estadio] %s (%s - %s)",
+                getName(),
+                getCiudad(),
+                getPais());
     }
 }

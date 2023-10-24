@@ -16,7 +16,7 @@ public class Parcial7Tests {
 
         PantallaLed pantallaLed = new PantallaLed();
 
-        assertEquals("[Jugador 6] Marcos Rojo > Defensor", pantallaLed.imprimir(jugadorBoca6));
+        assertEquals("[Jugador 6] Marcos Rojo > Defensor", pantallaLed.imprimir((IImprimible)jugadorBoca6));
         assertEquals("[Equipo] Boca Juniors > BOC", pantallaLed.imprimir(boca));
         assertEquals("[Estadio] La Bombonera (Buenos Aires - Argentina)", pantallaLed.imprimir(estadioBombonera));
     }

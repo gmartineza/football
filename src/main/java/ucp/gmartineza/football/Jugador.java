@@ -1,8 +1,9 @@
 package ucp.gmartineza.football;
 
+import ucp.gmartineza.football.Interfaces.IImprimible;
 import ucp.gmartineza.football.Interfaces.IJugador;
 
-public class Jugador implements IJugador{
+public class Jugador implements IJugador, IImprimible{
     String nombre;
     int numero;
     String posicion;
@@ -36,5 +37,13 @@ public class Jugador implements IJugador{
     @Override
     public void setPosicion(String pPosicion) {
         this.posicion = pPosicion;
+    }
+
+    public String impresion() {
+        // "[Jugador 6] Marcos Rojo > Defensor"
+        return String.format("[Jugador %d] %s > %s",
+                getNumero(),
+                getName(),
+                getPosicion());
     }
 }
