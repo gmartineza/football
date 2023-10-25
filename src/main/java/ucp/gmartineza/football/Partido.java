@@ -4,12 +4,43 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Partido {
-    String fecha;
-    Equipo equipoLocal;
-    Equipo equipoVisitante;
-    List<TarjetaBase> tarjetas = new ArrayList<>();
-    String nombre;
-    Estadio estadio;
+    private String fecha;
+    private Equipo equipoLocal;
+    private Equipo equipoVisitante;
+    private List<TarjetaBase> tarjetas = new ArrayList<>();
+    private String nombre;
+    private Estadio estadio;
+    private Arbitro arbitro;
+    private List<Arbitro> arbitroLinea; // 2...2
+    private Arbitro arbitroAsistente;
+
+    public Arbitro getArbitroAsistente() {
+        return arbitroAsistente;
+    }
+
+    public void setArbitroAsistente(Arbitro arbitroAsistente) {
+        this.arbitroAsistente = arbitroAsistente;
+    }
+
+    public List<Arbitro> getArbitroLinea() {
+        return arbitroLinea;
+    }
+
+    public void setArbitroLinea(List<Arbitro> arbitroLinea) {
+        if (this.arbitroLinea.size() == 2) {
+            this.arbitroLinea = arbitroLinea;
+        } else {
+            throw new IllegalArgumentException("ArbitroLinea list must contain exactly 2 items.");
+        }
+    }
+
+    public Arbitro getArbitro() {
+        return arbitro;
+    }
+
+    public void setArbitro(Arbitro arbitro) {
+        this.arbitro = arbitro;
+    }
 
     public Estadio getEstadio() {
         return estadio;
@@ -60,24 +91,24 @@ public class Partido {
     }
 
     // Constructor
-    public Partido(Equipo pEquipoLocal, Equipo pEquipoVisitante, String pNombre){
+    public Partido(Equipo pEquipoLocal, Equipo pEquipoVisitante, String pNombre) {
         setEquipoLocal(pEquipoLocal);
         setEquipoVisitante(pEquipoVisitante);
         setNombre(pNombre);
     }
 
-    public Partido(Estadio pEstadio, Equipo pEquipoLocal, Equipo pEquipoVisitante, String pNombre){
+    public Partido(Estadio pEstadio, Equipo pEquipoLocal, Equipo pEquipoVisitante, String pNombre) {
         setEstadio(pEstadio);
         setEquipoLocal(pEquipoLocal);
         setEquipoVisitante(pEquipoVisitante);
         setNombre(pNombre);
     }
 
-    public void agregar(TarjetaBase pTarjeta){
+    public void agregar(TarjetaBase pTarjeta) {
         this.tarjetas.add(pTarjeta);
     }
 
-    public int tarjetasCantidad(){
+    public int tarjetasCantidad() {
         return getTarjetas().size();
     }
 }

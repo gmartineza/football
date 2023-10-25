@@ -4,7 +4,29 @@ import java.util.List;
 import ucp.gmartineza.football.Interfaces.IJugador;
 
 public class Var {
-    Partido partido;
+    private Partido partido;
+    private AsistenteDeVideo asistenteDeVideo;
+    private List<AVAR> aVar;
+
+    public List<AVAR> getaVar() {
+        return aVar;
+    }
+
+    public void setaVar(List<AVAR> aVar) {
+        if (this.aVar.size() == 3) {
+            this.aVar = aVar;
+        } else {
+            throw new IllegalArgumentException("aVar list must contain exactly 3 items.");
+        }
+    }
+
+    public AsistenteDeVideo getAsistenteDeVideo() {
+        return asistenteDeVideo;
+    }
+
+    public void setAsistenteDeVideo(AsistenteDeVideo asistenteDeVideo) {
+        this.asistenteDeVideo = asistenteDeVideo;
+    }
 
     public Partido getPartido() {
         return partido;
