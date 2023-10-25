@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 import ucp.gmartineza.football.*;
 import ucp.gmartineza.football.Interfaces.*;;
 
-public class Parcial6Tests {
+public class CantidadDeTarjetasPorEquipoTest {
     @Test
     public void el_var_obtiene_solo_tarjetas_de_un_equipo_parcial_ejercicio_ejemplo_08() {
         Equipo boca = new Equipo("Boca Juniors", "BOC");

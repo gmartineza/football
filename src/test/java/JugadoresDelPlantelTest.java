@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 import ucp.gmartineza.football.*;
 import ucp.gmartineza.football.Interfaces.IJugador;
 
-public class Parcial5Tests {
+public class JugadoresDelPlantelTest {
     @Test
     public void equipo_plantel_parcial_ejercicio_ejemplo_09()
     {        

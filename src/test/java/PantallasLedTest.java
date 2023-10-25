@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 import ucp.gmartineza.football.*;
 import ucp.gmartineza.football.Interfaces.*;;
 
-public class Parcial7Tests {
+public class PantallasLedTest {
     @Test
     public void pantallas_estadio_parcial_ejercicio_ejemplo_10() {
         IJugador jugadorBoca6 = new Jugador("Marcos Rojo", 6);

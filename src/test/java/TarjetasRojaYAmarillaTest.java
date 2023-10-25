@@ -3,7 +3,7 @@ import static org.junit.Assert.*;
 
 import ucp.gmartineza.football.*;
 
-public class Parcial3Tests {
+public class TarjetasRojaYAmarillaTest {
 
     @Test
     public void tarjeta_roja_y_amarilla_parcial_ejercicio_ejemplo_07() {
