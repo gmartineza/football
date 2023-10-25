@@ -10,4 +10,8 @@ public abstract class ArbitroBase {
     public void setName(String name) {
         this.name = name;
     }
+
+    public ArbitroBase(String name){
+        setName(name);
+    }
 }
