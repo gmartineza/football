@@ -12,12 +12,15 @@ public class Var {
         return aVar;
     }
 
-    public void setaVar(List<AVAR> aVar) {
-        if (this.aVar.size() == 3) {
-            this.aVar = aVar;
-        } else {
-            throw new IllegalArgumentException("aVar list must contain exactly 3 items.");
-        }
+    public void setaVar(AVAR aVar1, AVAR aVar2, AVAR aVar3) {
+        aVar.add(aVar1);
+        aVar.add(aVar2);
+        aVar.add(aVar3);
+        // if (this.aVar.size() == 3) {
+        //     this.aVar = aVar;
+        // } else {
+        //     throw new IllegalArgumentException("aVar list must contain exactly 3 items.");
+        // }
     }
 
     public AsistenteDeVideo getAsistenteDeVideo() {
