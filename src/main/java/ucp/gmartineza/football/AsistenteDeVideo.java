@@ -4,7 +4,7 @@ public class AsistenteDeVideo extends IntegranteDelVar{
     private String nombre;
 
     public String getNombre() {
-        return nombre;
+        return this.nombre;
     }
     public void setNombre(String nombre) {
         this.nombre = nombre;

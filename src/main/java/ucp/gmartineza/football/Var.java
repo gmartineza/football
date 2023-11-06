@@ -1,4 +1,5 @@
 package ucp.gmartineza.football;
+import java.util.ArrayList;
 import java.util.List;
 
 import ucp.gmartineza.football.Interfaces.IJugador;
@@ -6,16 +7,16 @@ import ucp.gmartineza.football.Interfaces.IJugador;
 public class Var {
     private Partido partido;
     private AsistenteDeVideo asistenteDeVideo;
-    private List<AVAR> aVar;
+    private List<AVAR> aVar = new ArrayList<>();
 
     public List<AVAR> getaVar() {
-        return aVar;
+        return this.aVar;
     }
 
     public void setaVar(AVAR aVar1, AVAR aVar2, AVAR aVar3) {
-        aVar.add(aVar1);
-        aVar.add(aVar2);
-        aVar.add(aVar3);
+        this.aVar.add(aVar1);
+        this.aVar.add(aVar2);
+        this.aVar.add(aVar3);
         // if (this.aVar.size() == 3) {
         //     this.aVar = aVar;
         // } else {
@@ -24,7 +25,7 @@ public class Var {
     }
 
     public AsistenteDeVideo getAsistenteDeVideo() {
-        return asistenteDeVideo;
+        return this.asistenteDeVideo;
     }
 
     public void setAsistenteDeVideo(AsistenteDeVideo asistenteDeVideo) {
@@ -32,7 +33,7 @@ public class Var {
     }
 
     public Partido getPartido() {
-        return partido;
+        return this.partido;
     }
 
     public void setPartido(Partido partido) {
@@ -44,15 +45,21 @@ public class Var {
         setPartido(pPartido);
     }
 
+    public Var(Partido pPartido, AsistenteDeVideo asistenteDeVideo, AVAR aVAR1, AVAR aVAR2, AVAR aVAR3){
+        setPartido(pPartido);
+        setAsistenteDeVideo(asistenteDeVideo);
+        setaVar(aVAR1, aVAR2, aVAR3);
+    }
+
     public int cantidadTarjetasAmarillas(){
-        List<TarjetaBase> tarjetas = this.partido.getTarjetas();
+        List<TarjetaBase> tarjetas = getPartido().getTarjetas();
         return (int) tarjetas.stream()
                 .filter(tarjeta -> tarjeta.getColor() == "AMARILLA").
                 count();
     }
 
     public int cantidadTarjetasRojas() {
-        List<TarjetaBase> tarjetas = this.partido.getTarjetas();
+        List<TarjetaBase> tarjetas = getPartido().getTarjetas();
         return (int) tarjetas.stream()
                 .filter(tarjeta -> tarjeta.getColor() == "ROJA").
                 count();
@@ -61,7 +68,7 @@ public class Var {
     public int cantidadTarjetas(Equipo pEquipo){
         // have a list of players of pEquipo to reference searching for cards
         List<IJugador> jugadores = pEquipo.getJugadores();
-        List<TarjetaBase> tarjetas = this.partido.getTarjetas();
+        List<TarjetaBase> tarjetas = getPartido().getTarjetas();
         return (int) tarjetas.stream()
                 .filter(tarjeta -> jugadores.contains(tarjeta.getJugador())).
                 count();
