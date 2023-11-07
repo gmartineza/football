@@ -1,6 +1,11 @@
 package ucp.gmartineza.football;
 
 public abstract class IntegranteDelVar extends ArbitroBase{
+    public IntegranteDelVar(String name, String tipoAsistente) {
+        super(name);
+        setTipoAsistente(tipoAsistente);
+    }
+
     private String TipoAsistente;
 
     public String getTipoAsistente() {
@@ -8,6 +13,6 @@ public abstract class IntegranteDelVar extends ArbitroBase{
     }
 
     public void setTipoAsistente(String tipoAsistente) {
-        TipoAsistente = tipoAsistente;
+        this.TipoAsistente = tipoAsistente;
     }
 }
